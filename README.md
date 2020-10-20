@@ -1,2 +1,3 @@
 # tic-tac-toe
-Created with CodeSandbox
+
+A simple tic tac toe made using react js
