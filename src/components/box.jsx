@@ -26,7 +26,7 @@ export default function Box() {
         : setXo(xo.fill("O", pos, pos + 1));
 
       const pass = ["048", "147", "246", "345", "012", "258", "876", "630"];
-      pass.forEach(function (item, index) {
+      let doned = pass.some(function (item, index) {
         if (
           xo[item[0]] === xo[item[1]] &&
           xo[item[1]] === xo[item[2]] &&
@@ -34,10 +34,11 @@ export default function Box() {
         ) {
           done(item);
           return true;
+        } else {
+          return false;
         }
-        return false;
       });
-      xo.some((item) => item === "") ? null : clear();
+      !doned && (xo.some((item) => item === "") ? null : clear());
       change === 0 ? setChange(1) : setChange(0);
     }
   }
@@ -55,7 +56,6 @@ export default function Box() {
       SetStop(true);
       return preValue;
     });
-    return true;
   }
 
   function clear() {

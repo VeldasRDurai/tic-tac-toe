@@ -1,0 +1,55 @@
+/* :root {
+  --color5: #0b0c10;
+  --color4: #202833;
+  --color3: #45a29e;
+  --color2: #66fcf1;
+  --color1: #c5c6c7;
+} */
+
+body {
+  margin: 0px;
+  background-color: #202833; /*4*/
+}
+.clsapp {
+  /* height: 600px;
+  width: 600px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  border: 1px solid #0b0c10; 
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px #66fcf1;
+  background-color: #66fcf1; */
+}
+.clshead {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+.clsbox {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  justify-content: center;
+}
+.clssmallbox {
+  border: 1px solid black;
+  padding-left: 6px;
+  overflow: hidden;
+  font-size: 50px;
+}
+.clsbox > button {
+  margin-top: 10px;
+  grid-area: 4/2/5/3;
+}
+
+@media screen and (max-width: 800px) {
+  .clsbox {
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: 25vw 25vw 25vw;
+  }
+  .clssmallbox {
+    padding-left: 10px;
+    font-size: 25vw;
+  }
+}
